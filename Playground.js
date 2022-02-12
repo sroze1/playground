@@ -34,3 +34,4 @@ function areStringsEqualCaseInsensitive(left, right) {
   // return true if the passed strings are equal ignoring case
   return left.length === right.length ? true : false;
 } console.log(areStringsEqualCaseInsensitive("kuttiDaBaca", "TattiYawanda"));
+} console.log(areStringsEqualCaseInsensitive("kuttiDaBaca", "TattiYawanda"));
