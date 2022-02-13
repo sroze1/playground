@@ -71,3 +71,9 @@ function getLastItems(array, n) {
   return array.slice(-n);
 }
 console.log(getLastItems([1,2,3,4,5,6], 2));
+
+
+git fetch origin main:tmp
+git rebase tmp
+git push origin HEAD:main
+git branch -D tmpgit pull
