@@ -34,4 +34,40 @@ function areStringsEqualCaseInsensitive(left, right) {
   // return true if the passed strings are equal ignoring case
   return left.length === right.length ? true : false;
 } console.log(areStringsEqualCaseInsensitive("kuttiDaBaca", "TattiYawanda"));
-} console.log(areStringsEqualCaseInsensitive("kuttiDaBaca", "TattiYgwanda"));
+
+function getEvenNumbers(nums) {
+  //return an array of only the even numbers in the given array
+ let evenArray = [];
+ for(numbers of nums) { 
+   if(numbers % 2 === 0) { 
+     evenArray.push(numbers);
+   }
+ }
+    
+    return evenArray;
+  }
+
+console.log(getEvenNumbers([1,2,3,4,5,6]));
+
+
+function getItemsLongerThan(array, len) {
+  //return an array of only the items longer than the given length
+  let longerThanLength = [];
+
+  for (numbers of array) {
+    if (numbers > len) {
+      longerThanLength.push(numbers);
+    }
+  }
+  return longerThanLength;
+}
+
+console.log(getItemsLongerThan([1,20,3,4,9,17], 10));
+
+
+
+function getLastItems(array, n) {
+  // return an array with the 'n' last items of 'array'
+  return array.slice(-n);
+}
+console.log(getLastItems([1,2,3,4,5,6], 2));
