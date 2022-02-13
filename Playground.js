@@ -73,7 +73,66 @@ function getLastItems(array, n) {
 console.log(getLastItems([1,2,3,4,5,6], 2));
 
 
-git fetch origin main:tmp
-git rebase tmp
-git push origin HEAD:main
-git branch -D tmpgit pull
+
+function getSandwichFilling(sandwich) {
+  // if an array is a sandwich, the first and last items are the bread, return an array with the filling of the sandwich
+  let filling = [];
+  if (sandwich.length > 2) {
+    filling.push(sandwich.slice(1, -1));
+  }
+  return filling;
+}
+
+console.log(getSandwichFilling(['this', 'is', 'the', 'filling', 'penchod']));
+
+
+
+
+function removeItem(array, n) {
+  // return a new array without the item on position 'n', effectively removing it from the array
+  // second number means remove 1 element only
+  array.splice(n, 1);
+  return array;
+} 
+
+
+function mergeArrays(arr1, arr2) {
+  // return a new array with all the elements of arr1 followed by all the elements of arr2
+
+  let newArray = [...arr1, ...arr2];
+  return newArray;
+} console.log(mergeArrays([1,2,3], [4,5,6]));
+
+
+
+function flattenArrayByOne(arrayOfArrays) {
+  // given a nested array or arrays, return a new array with one less level of nesting. All the elements of all the original nested arrays must be kept in their original order
+  // for example:
+
+  return arrayOfArrays.flat();
+  // [[1],[2],[[3,4]]] => [1,2,[3,4]]
+} console.log(flattenArrayByOne([[1], [2], [[3, 4]]]));
+
+
+
+function isItemOmnipresent(arrayOfArrays, item) {
+
+  let trueOrFalse = false;
+  // return true if the passed item is present in all the arrays inside arrayOfArrays
+ for(elements of arrayOfArrays.flat()) { 
+  if(elements === item) { 
+    trueOrFalse = true;
+  }
+ } return trueOrFalse; 
+} console.log(isItemOmnipresent([1,2,3,4,5, [6,7,8]], 5));
+
+
+
+
+
+function isOver40(user) {
+  /*
+    This function takes a user object with a property of age. It should return true if the user is over 40 and false if the user is 40 or younger.
+    */
+  return user.age > 40 ? true : false;
+}
