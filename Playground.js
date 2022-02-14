@@ -135,4 +135,133 @@ function isOver40(user) {
     This function takes a user object with a property of age. It should return true if the user is over 40 and false if the user is 40 or younger.
     */
   return user.age > 40 ? true : false;
-}
+} console.log(isOver40(user = {age:10}));
+
+
+function getUserAge(user) {
+  // return the user's age as a number.
+  // you can assume that the passed user will always have a 'yearOfBirth' property.
+  return Number(user.yearOfBirth);
+} console.log(getUserAge(user = {yearOfBirth: '10'}));
+
+
+function getUserPetAge(user) {
+  /*  The argument user will be an object. The object is nested; there are objects paired to keys on the user object. It will be in this format:
+      {
+        name: "Tom",
+        age: 26,
+        pet: {
+          name: "Barney",
+          age: 6,
+          type: "good boy"
+        }
+      };
+      This function should access the age property in the nested pet object and return the value
+  */
+
+      return user.pet.name;
+} console.log(getUserPetAge(user = {
+        name: "Tom",
+        age: 26,
+        pet: {
+          name: "Barney",
+          age: 6,
+          type: "good boy"
+        }
+      }));
+
+
+
+      function createProduct() {
+        /*
+    This function should return an object with a type property and a price property. The value for type can be any string, and the value for price should be a number.
+    */
+
+    return property = {type: 'String', price: 2000}
+      } console.log(createProduct());
+
+
+      function addPriceToProduct(product, price) {
+        /* The argument product will be an object that looks like this:
+    { type: 'Tofu slices' }
+    Add a price property to this object and set its value to the price passed in as an argument. Then return the object.
+    */
+
+        product.priceObject=  price ;
+        return product.priceObject;
+      } console.log(addPriceToProduct(productObject = {type: 'tofu'}, 2000));
+
+      function getPropertyOfProduct(product, property) {
+        /* The argument product will be an object that looks like this:
+    { type: 'Easy-peeler satsumas', price: '£1.09', quantity: 8 }
+    Given a 'property' as an argument, return the value associated with that 'property'. 
+    E.g. if asked for the price 'property' of the above satsumas object, your function would return '£1.09'.
+  */
+    return product[property];
+      } console.log(getPropertyOfProduct(product = {type: 'Easy-peeler', price: 1.09}, 'price'));
+
+
+      function addPropertyToProduct(product, property, value) {
+        /* The argument 'product' will be an object that looks like this:
+    { type: 'Terminator 2: Judgement Day', price: '£6.99', quantity: 1 }
+    Given a 'property' as an argument, as well as its corresponding value, update the 'product' to include this new information. Then return the updated 'product'.
+    E.g. if given the 'property' 'length' and the value '2h 36m' (yes it really is that long) 
+    your function should return { type: 'Terminator 2: Judgement Day', price: '£6.99', quantity: 1, length: '2h 36m' }
+  */
+        product[property] = value;
+
+        return product;
+      } console.log(
+        addPropertyToProduct(
+          (product = {
+            type: "Terminator 2: Judgement Day",
+            price: "£6.99",
+            quantity: 1,
+          }), 'LENGTH:', '2h36m'
+        )
+      );
+
+
+      function createNorthcoder(name, yearOfBirth) {
+        // return an object with:
+        // a name property set to the value of the name parameter
+        // an age property set to whatever the age of the northcoder would be in the year 2019
+        // a language property set to 'JavaScript'
+
+        return (obj = { name: name, age: yearOfBirth, language: "JavaScript" });
+      } console.log(createNorthcoder('Sheroze', 1997));
+
+
+
+      function updateVoterAddress(voter, correctHouseNumber) {
+        /* Uh-Oh! We've got some silly voters who've registered their addresses incorrectly. Lets help them fix those typos by changing their houseNumber to the correctHouseNumber. The user object looks like this:
+    {
+      name: "Alex",
+      age: 39,
+      address: { 
+        houseNumber: 2, 
+        street: "Old St", 
+        city: "Chester" 
+      }
+    };
+    Note - The function does NOT need to return anything.
+  */
+        user[voter[houseNumber]] = correctHouseNumber;
+      }console.log();
+
+          function updateVoterAddress(voter, correctHouseNumber) {
+            /* Uh-Oh! We've got some silly voters who've registered their addresses incorrectly. Lets help them fix those typos by changing their houseNumber to the correctHouseNumber. The user object looks like this:
+    {
+      name: "Alex",
+      age: 39,
+      address: { 
+        houseNumber: 2, 
+        street: "Old St", 
+        city: "Chester" 
+      }
+    };
+    Note - The function does NOT need to return anything.
+  */
+            user[voter[houseNumber]] = correctHouseNumber;
+          }
+          console.log();
